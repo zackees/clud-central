@@ -5,6 +5,8 @@ echo Running ruff src
 uv run ruff check --fix src
 echo Running ruff tests
 uv run ruff check --fix tests
+echo Running the complexity ratchet across all Python paths
+uv run ruff check --select C901,RUF100 .
 echo Running black src tests
 uv run black src tests
 echo Running isort src tests
